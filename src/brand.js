@@ -23,14 +23,25 @@ export const BRAND = {
   tagline: 'Indian spices. Global possibilities.',
 };
 
-/** TODO: replace with verified details before launch. */
+```js
 export const CONTACT = {
   addressLines: ['Chennai', 'Tamil Nadu, India'],
+
   phone: env('VITE_CONTACT_PHONE', '+91 94441 82024'),
-  phoneHref: 'tel:' + env('VITE_CONTACT_PHONE', '+91 94441 82024').replace(/[^\d+]/g, ''),
+
+  // Opens WhatsApp with a pre-filled message
+  phoneHref:
+    'https://wa.me/919444182024?text=' +
+    encodeURIComponent(
+      'Hello MIDLANE EXPORTS, I would like to know more about your products and export services.'
+    ),
+
   email: env('VITE_CONTACT_EMAIL', 'midlaneexportsgmail.com'),
+
   hours: 'Monday to Saturday, Indian Standard Time',
 };
+```
+
 
 export const CONFIG = {
   formEndpoint: env('VITE_FORM_ENDPOINT', ''),
