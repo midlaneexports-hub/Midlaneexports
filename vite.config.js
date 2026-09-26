@@ -27,6 +27,7 @@ export default defineConfig({
     // Allow Render hostname
     allowedHosts: ['vib-g5ac.onrender.com'],
     allowedHosts: ['imp-zqjh.onrender.com'],
+    allowedHosts: ['midlaneexports.onrender.com'],
   },
 
   build: {
