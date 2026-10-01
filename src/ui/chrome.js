@@ -27,8 +27,7 @@ function submenuHTML() {
     PRODUCTS.map((p) => `
       <a class="subnav__item" role="menuitem" href="${p.file}">
         <span class="subnav__dot" style="--pc:${p.accent}"></span>
-        <span>${p.name}</span>
-        ${p.primary ? '<em class="subnav__tag">Primary focus</em>' : ''}
+        <span>${p.name}</span>${p.primary ? '<em class="subnav__tag">Primary focus</em>' : ''}
       </a>`).join('')
   }</div>`;
 }
@@ -49,7 +48,8 @@ function headerHTML(here) {
   return `
   <div class="header__inner">
     <a href="index.html" class="logo">
-      <span class="logo__mark">${BRAND.mark}</span><span>${BRAND.name}</span>
+      <img src="${BRAND.logo}" alt="${BRAND.short || ''}" class="site-logo-img" style="height: 32px; width: auto; object-fit: contain; display: block;" />
+      <span>${BRAND.short || ''}</span>
     </a>
     <nav class="nav" aria-label="Main navigation">${links}</nav>
     <a href="contact.html" class="btn header__cta">Send an enquiry <span class="arrow" aria-hidden="true">→</span></a>

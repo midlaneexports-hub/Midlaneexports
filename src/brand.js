@@ -15,11 +15,12 @@ const env = (key, fallback) => {
 };
 
 export const BRAND = {
-  name: env('VITE_COMPANY_NAME', 'MIDLANEEXPORTS'),
-  short: env('VITE_COMPANY_SHORT', 'MIDLANEEXPORTS'),
-  mark: env('VITE_COMPANY_MARK', 'A'),
-  wordmark: env('VITE_COMPANY_WORDMARK', 'MIDLANEEXPORTS'),
-  positioning: ['Roote.', 'Ready for the world.'],
+  name: env('VITE_COMPANY_NAME', ''),
+  short: env('VITE_COMPANY_SHORT', ''),
+  logo: '/assets/photo/logo.png',
+  logoMark: 'M', // or add whatever property your Header component expects
+  wordmark: env('VITE_COMPANY_WORDMARK', ''),
+  positioning: ['Rooted.', 'Ready for the world.'],
   tagline: 'Indian spices. Global possibilities.',
 };
 

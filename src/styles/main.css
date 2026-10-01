@@ -6,7 +6,24 @@
    Palette and type scale mirror the live site: electric blue primary, hot
    orange accent, near-black ink, and a grotesque/mono pairing.
    ========================================================================== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  white-space: nowrap;
+}
 
+.logo__mark {
+  display: none;
+}
+
+.site-logo {
+  height: 100px;
+  width: auto;
+  max-width: 300px;
+  object-fit: contain;
+  display: block;
+}
 
    :root {
     /* White / black / orange. Orange leads, gold is the warm secondary. */
