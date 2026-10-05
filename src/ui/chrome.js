@@ -48,7 +48,7 @@ function headerHTML(here) {
   return `
   <div class="header__inner">
     <a href="index.html" class="logo">
-      <img src="${BRAND.logo}" alt="${BRAND.short || ''}" class="site-logo-img" style="height: 32px; width: auto; object-fit: contain; display: block;" />
+      <img src="${BRAND.logo}" alt="${BRAND.short || ''}" class="site-logo-img" style="height: 100px; width: auto; object-fit: contain; display: block;" />
       <span>${BRAND.short || ''}</span>
     </a>
     <nav class="nav" aria-label="Main navigation">${links}</nav>
