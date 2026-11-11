@@ -29,6 +29,7 @@ export default defineConfig({
     allowedHosts: ['midlanee.onrender.com'],
     allowedHosts: ['midlaneexports-wbhs.onrender.com'],
     allowedHosts: ['midlanee.onrender.com'],
+    allowedHosts: ['midlaneecports.onrender.com'],
   },
 
   build: {
