@@ -27,6 +27,7 @@ const allowedHosts = [
   'midlaneexports-fn4k.onrender.com',
   'midlaneexports.com',
   'www.midlaneexports.com',
+  'www.midlaneexports.com',
 ];
 
 export default defineConfig({
