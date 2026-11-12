@@ -1,7 +1,8 @@
+
 import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
 
-// Every top-level HTML file is a real page; list them so Vite builds each one.
+// Every top-level HTML file is a real page
 const pages = [
   'index',
   'about',
@@ -18,20 +19,27 @@ const pages = [
   'pepper',
 ];
 
+const allowedHosts = [
+  'midlaneexports.onrender.com',
+  'midlanee.onrender.com',
+  'midlaneexports-wbhs.onrender.com',
+  'midlaneecports.onrender.com',
+  'midlaneexports-fn4k.onrender.com',
+  'midlaneexports.com',
+  'www.midlaneexports.com',
+];
+
 export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 5173,
     open: false,
+    allowedHosts,
+  },
 
-    // Allow Render hostname
-    allowedHosts: ['midlaneexports.onrender.com'],
-    allowedHosts: ['midlanee.onrender.com'],
-    allowedHosts: ['midlaneexports-wbhs.onrender.com'],
-    allowedHosts: ['midlanee.onrender.com'],
-    allowedHosts: ['midlaneecports.onrender.com'],
-    allowedHosts: ['midlaneexports-fn4k.onrender.com'],
-    allowedHosts: ['midlaneexports.com'],
+  preview: {
+    host: '0.0.0.0',
+    allowedHosts,
   },
 
   build: {
