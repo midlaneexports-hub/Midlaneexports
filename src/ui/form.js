@@ -8,16 +8,15 @@
 export function initForm() {
   const form = document.querySelector('[data-form]');
   if (!form) return;
-  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-  // Set Web3Forms access key
-  const accessKeyInput = form.querySelector(
-    'input[name="access_key"]'
-  );
+  // Get access key from Vite env, or fall back to whatever is already set in the HTML
+  const accessKeyInput = form.querySelector('input[name="access_key"]');
+  const envKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-  if (accessKeyInput) {
-    accessKeyInput.value = accessKey;
+  if (envKey && accessKeyInput) {
+    accessKeyInput.value = envKey;
   }
+
   const status = form.querySelector('[data-form-status]');
   const submitButton = form.querySelector('button[type="submit"]');
 
